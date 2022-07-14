@@ -6,31 +6,140 @@
 int main()
 {
     int answer = 0;
-    int pick = 0;
-    std::cout << "Pick a Question" << "\n" << "Question 1: How many fingers does a Monkey have?" << std::endl << "Question 2: What color is the grass?"
-        << std::endl << "Question 3: What is the fastest animal alive?" << std::endl << "Question 4: Whats another name for Ping pong?" << "\n";
-    std::cin >> pick;
+    int pick = 1;
+    std::string response;
     
-    while (pick != 0) 
+    while (pick != 0)
     {
-        system("cls");
-        switch (pick)
+        int soup = rand() % 4;
+        std::cout << "Generate a question? (Yes or No)" << "\n"; 
+        std::cin >> response;
+        if (response != "No") 
         {
-        case 1:
-            std::cout << "Question 1: How many fingers does a Monkey have?" << "\n";
-            std::cin >> answer;
-            if (answer != 5) 
+            switch (soup)
             {
-                std::cout << "Nope try again" << std::endl;
-            }
-            else 
-            {
-                std::cout << "Great Job!!!" << std::endl;
-            }
+            case 1:
+                system("cls");
+                std::cout << "Question 1: How many fingers does a Monkey have?" << "\n";
+                std::cin >> answer;
+                if (answer != 5)
+                {
+                    system("cls");
+                    std::cout << "Nope" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                else
+                {
+                    system("cls");
+                    std::cout << "Great Job!!!" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
                 break;
+            case 2:
+                system("cls");
+                std::cout << "Question 2: What color is the grass?" << "\n";
+                std::cin >> response;
+                if (response != "green") {
+                    system("cls");
+                    std::cout << "Nope" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                else
+                {
+                    system("cls");
+                    std::cout << "Great Job!!!" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                break;
+            case 3:
+                system("cls");
+                std::cout << "Question 3: What is the fastest animal alive?" << "\n";
+                std::cin >> response;
+                if (response != "cheetah") {
+                    system("cls");
+                    std::cout << "Nope" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                else
+                {
+                    system("cls");
+                    std::cout << "Great Job!!!" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                break;
+            case 4:
+                system("cls");
+                std::cout << "Question 4: What sport is uses a golf ball?" << "\n";
+                std::cin >> response;
+                if (response != "golf") {
+                    system("cls");
+                    std::cout << "Nope" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if (response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                else
+                {
+                    system("cls");
+                    std::cout << "Great Job!!!" << std::endl;
+                    std::cout << "Go back to menu? (Yes or No)" << "\n";
+                    std::cin >> response;
+                    if(response == "No" || response == "no") {
+                        pick = 0;
+                        system("cls");
+                    }
+                    system("cls");
+                }
+                break;
+            }
+        }
+        else {
+            system("cls");
+            std::cout << "Goodbye";
+            pick = 0;
         }
     }
-    
+        
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

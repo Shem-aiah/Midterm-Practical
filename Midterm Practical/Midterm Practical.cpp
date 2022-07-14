@@ -5,9 +5,32 @@
 
 int main()
 {
+    int answer = 0;
     int pick = 0;
-    std::cout << "Question 1: How many fingers does a Monkey have?" << std::endl << "Question 2: What color is the grass?" 
-        << std::endl << "Question 3: What is the fastest animal alive?" << std::endl << "Question 4: Whats another name for Ping pong?";
+    std::cout << "Pick a Question" << "\n" << "Question 1: How many fingers does a Monkey have?" << std::endl << "Question 2: What color is the grass?"
+        << std::endl << "Question 3: What is the fastest animal alive?" << std::endl << "Question 4: Whats another name for Ping pong?" << "\n";
+    std::cin >> pick;
+    
+    while (pick != 0) 
+    {
+        system("cls");
+        switch (pick)
+        {
+        case 1:
+            std::cout << "Question 1: How many fingers does a Monkey have?" << "\n";
+            std::cin >> answer;
+            if (answer != 5) 
+            {
+                std::cout << "Nope try again" << std::endl;
+            }
+            else 
+            {
+                std::cout << "Great Job!!!" << std::endl;
+            }
+                break;
+        }
+    }
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
